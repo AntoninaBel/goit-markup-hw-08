@@ -1,0 +1,72 @@
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.benefits-list {
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item {
+    //width: 450px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 354px;
+      margin-right: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    color: var(--second-text-color);
+    @include font(700, 14px, 16px, 0.03em);
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  &__desc {
+    color: var(--primary-text-color);
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+  }
+  &__photo {
+    margin-bottom: 30px;
+    justify-content: center;
+    @include position-items;
+    height: 120px;
+    //width: 450px;
+    background-color: var(--team-bg-color);
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
